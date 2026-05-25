@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_order_line_funeral_details
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-22 00:00+0000\n"
+"PO-Revision-Date: 2026-05-22 00:00+0000\n"
+"Last-Translator: NuoBiT Solutions SL <info@nuobit.com>\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_add_card
+msgid "Add Condolence Card"
+msgstr "Añadir tarjeta de condolencias"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_condolence_card
+msgid "Condolence Card"
+msgstr "Tarjeta de condolencias"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_condolence_ribbon
+msgid "Condolence Ribbon"
+msgstr "Cinta de condolencias"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_deceased_name
+msgid "Deceased Name"
+msgstr "Nombre del difunto"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_delivery_city
+msgid "Delivery City"
+msgstr "Localidad de entrega"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_delivery_notes
+msgid "Delivery Notes"
+msgstr "Notas de entrega"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_delivery_state
+msgid "Delivery Province"
+msgstr "Provincia de entrega"
+
+#. module: sale_order_line_funeral_details
+#: code:addons/sale_order_line_funeral_details/models/sale_order_line.py:0
+#: model_terms:ir.ui.view,arch_db:sale_order_line_funeral_details.view_sale_order_line_funeral_details_form
+#: model_terms:ir.ui.view,arch_db:sale_order_line_funeral_details.view_order_form_inherit_funeral_details
+msgid "Funeral Details"
+msgstr "Datos funerarios"
+
+#. module: sale_order_line_funeral_details
+#: model:ir.model.fields,field_description:sale_order_line_funeral_details.field_sale_order_line__funeral_home
+msgid "Funeral Home"
+msgstr "Tanatorio"

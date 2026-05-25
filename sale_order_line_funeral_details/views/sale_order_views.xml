@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 NuoBiT Solutions SL - Eric Antones <eantones@nuobit.com>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_sale_order_line_funeral_details_form" model="ir.ui.view">
+        <field name="name">sale.order.line.funeral.details.form</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <form string="Funeral Details" create="0" edit="0">
+                <sheet>
+                    <group>
+                        <field name="order_id" readonly="1" />
+                        <field name="product_id" readonly="1" />
+                    </group>
+                    <separator />
+                    <group>
+                        <group>
+                            <field name="funeral_deceased_name" readonly="1" />
+                            <field name="funeral_home" readonly="1" />
+                            <field name="funeral_delivery_city" readonly="1" />
+                            <field name="funeral_delivery_state" readonly="1" />
+                        </group>
+                        <group>
+                            <field name="funeral_add_card" readonly="1" />
+                            <field name="funeral_delivery_notes" readonly="1" />
+                            <field name="funeral_condolence_ribbon" readonly="1" />
+                            <field name="funeral_condolence_card" readonly="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_order_form_inherit_funeral_details" model="ir.ui.view">
+        <field name="name">sale.order.form.funeral.details</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='order_line']/tree//field[@name='price_subtotal']"
+                position="after"
+            >
+                <button
+                    name="action_view_funeral_details"
+                    type="object"
+                    icon="fa-pagelines"
+                    title="Funeral Details"
+                    invisible="not funeral_details_available"
+                />
+                <field name="funeral_details_available" column_invisible="1" />
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']/form/field[@name='name']"
+                position="after"
+            >
+                <field name="funeral_details_available" invisible="1" />
+                <group
+                    name="funeral_details"
+                    string="Funeral Details"
+                    invisible="not funeral_details_available"
+                >
+                    <group>
+                        <field name="funeral_deceased_name" />
+                        <field name="funeral_home" />
+                        <field name="funeral_delivery_city" />
+                        <field name="funeral_delivery_state" />
+                    </group>
+                    <group>
+                        <field name="funeral_add_card" />
+                        <field name="funeral_delivery_notes" />
+                        <field name="funeral_condolence_ribbon" />
+                        <field name="funeral_condolence_card" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

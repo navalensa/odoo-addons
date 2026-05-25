@@ -1,0 +1,2 @@
+- Navalen 334 SA
+- NuoBiT Solutions SL
